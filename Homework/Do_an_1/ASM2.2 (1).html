@@ -12,8 +12,6 @@
             padding: 0;
         }
 
-        
-
         header {
             overflow: auto;
             padding: 20px;
@@ -211,6 +209,134 @@
                 font-size: 22px;
                 color: grey;
             }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-family: "Helvetica Neue",Helvetica;
+            }
+            
+            header {
+                overflow: auto;
+                padding: 20px;
+            }
+
+            ul li a {
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+
+            ul {
+                list-style: none;   
+            }
+
+            .left li, .right li {
+                padding: 5% 9% 5% 2%;
+            }
+        
+            .right {
+                margin-right: 0px;
+            }
+
+            .left li, .right li { 
+                float: left;
+            } 
+
+            .banner {
+                background-image: none;
+                height: 470px;
+                overflow: auto;
+            }
+
+            .content {
+                color: white;
+                padding: 6% 0px 8% 3%;
+                margin-top: 10%;
+                margin-left: 3%;
+                margin-right: 3%;
+                border-bottom: 1px solid grey;
+            }
+
+            .content h1 {
+                font-size: 78px;
+                color: black;
+                margin-bottom: 4%;
+            }
+
+            .content p {
+                font-size: 30px;
+                color: rgb(148, 144, 144);
+            }
+
+            .image-gallery {
+                padding: 6% 0px 5% 3%;
+                margin-top: 4%;
+                margin-left: 3%;
+                margin-right: 3%;
+                background-color:white;
+                overflow: auto;
+            }
+
+            .introduction h2 {
+                font-size: 80px;
+            }
+
+            .introduction p {
+                font-size: 27px;
+                color: grey;
+                margin-bottom: 5%;
+            }
+
+            .img-list .col1, .img-list .col2, .img-list .col3 {
+                float: left;
+                width: 90%;
+            }
+
+            .img-list .col1, .img-list .col2 {
+                margin-right: 0%;
+            }
+
+            .tokyo, .paris, .newyork, .mexico {
+                margin-left: 0%;
+                margin-bottom: 0%;
+                margin-bottom: 10%;
+            }
+
+            .invite {
+                margin-top: 0%;
+            }
+
+            .img-list img {
+                width: 100%; 
+            }
+
+            .footer {
+                padding: 6% 0px 5% 3%;
+                margin-top: 0%;
+                margin-left: 3%;
+                margin-right: 3%;
+                background-color: white;
+                overflow: auto;
+            }
+
+            .footer .col1, .footer .col2, .footer .col3 {
+                float: none;
+                width: 100%;
+                margin-bottom: 10%;
+            }
+
+            .footer-content h3 {
+                font-weight: bold;
+                font-size: 50px;
+            }
+
+            .footer-content p {
+                font-size: 22px;
+                color: grey;
+            }    
         }
     </style>
 </head>
