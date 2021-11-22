@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(241, 241, 156);
+            padding-right: 20px;
+            color:rgb(38, 98, 209);
+            padding-left: 3px;
+        }
+
+        table {
+            margin: 2em;
+        }
+
+        .phieu_dang_ky {
+            border: 1px solid black;
+            Width: 600px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        
+        tr {
+            height: 28px;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .trang_thai {
+            text-align: center;
+            color: orange;
+        }
+
+        .input1 {
+            width: 300px;
+
+            margin-right: 40px;
+        }
+
+        .input2 {
+            width: 220px;
+
+        }
+
+
+        h1 {
+            text-align: center;
+            color: rgb(58, 157, 238);
+        }
+
+        .input_tuoi {
+            width: 40px;
+        }
+
+        .nguoi_tre {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        fieldset {
+            width: 300px;
+            border-color: red;
+            margin-left: 80px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .khachvn {
+            margin-right: 20px;
+        }
+
+        legend {
+            color: rgb(184, 123, 9);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="phieu_dang_ky">
+            <h1>Đăng ký du lịch</h1>
+            <form class="form_table">
+                <table>
+                    <tr>
+                        <td><label for="name">Họ và tên:</label></td>
+                        <td><input type="text" id="name" name="name" class="input1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dia_chi">Địa chỉ:</label></td>
+                        <td><input type="text" id="dia_chi" name="dia_chi" class="input2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dien_thoai">Điện thoại:</label></td>
+                        <td><input type="text" id="dien_thoai" name="dien_thoai" class="input3"></td>
+                    </tr>
+                    <tr>
+                        <td class="khachvn">Khách Việt Nam</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Chọn tour</td>
+                        <td>
+                            <select id="tour" name="tour" class="select_tour">
+                                <optgroup value="bac" label="Miền Bắc">
+                                    <option value="bac">Hà Nội - Hạ Long - Sapa</option>
+                                    <option value="bac">Hà Nội - Chùa Hương - Ninh Bình</option>
+                                    <option value="bac">Hà Nội - Cát Bà - Tuần Châu</option>
+                                </optgroup>
+                                <optgroup value="bac" label="Miền Trung">
+                                    <option value="bac">Huế - Bạch Mã - Đà Nẵng</option>
+                                    <option value="bac">Nha Trang - Đà Lạt</option>
+                                    <option value="bac">Buôn Mê Thuột - Gia Lai - Kontum</option>
+                                </optgroup>
+                                <optgroup value="bac" label="Miền Trung">
+                                    <option value="bac">TP.HCM - Cần Thơ - Cà Mau</option>
+                                    <option value="bac">Tp.HCM - Mỹ Tho</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phương tiện</td>
+                        <td>
+                            <input type="radio" id="may_bay" name="phuong_tien" value="may_bay">
+                            <label for="may_bay">Máy bay</label>
+                            <input type="radio" id="xe_oto" name="phuong_tien" value="xe_oto">
+                            <label for="xe_oto">Xe ô tô</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <fieldset>
+                                <legend><i>Số lượng đoàn khách</i></legend>
+                                <div class="nguoi_tre">
+                                    <label for="so_luong_nguoi">Người lớn:</label>
+                                    <input type="text" id="so_luong_tre" name="so_luong_tre" class="input_tuoi">
+                                    <label for="so_luong_tre">Trẻ em:</label>
+                                    <input type="text" id="so_luong_tre" name="so_luong_tre" class="input_tuoi">
+                                </div>
+                                
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ghi chú thêm</td>
+                        <td>
+                            <select id="do_tuoi" size="2" class="select_tuoi">
+                                <option value="6_tuoi">Có 2 trẻ em dưới 6 tuổi</option>
+                                <option value="an_chay">Có 2 người ăn chay</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="button">
+                            <button type="button">Đồng ý</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="trang_thai">Bạn đã đăng ký thành công!!!</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type='text/css'>
+        .button {
+            background-color: #2dc08a;
+            color: white;
+            width: 150px;
+            padding: 15px;
+            font-size: 15px;
+            border: none;
+            display: none;
+        }
+
+        .drop-down:hover .drop-down-list, .drop-down:hover .button {
+            display: block;
+        }
+`
+        .drop-down {
+            position: relative;
+            display: inline-block;
+        }
+
+        .button {
+            background-color: #2dc08a;
+            color: white;
+            width: 150px;
+            padding: 15px;
+            font-size: 15px;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: #156d4d;
+        }
+
+        .drop-down-list {
+            display: none;
+            background-color: white;
+            width: 150px;
+            box-shadow: 2px 3px 10px 0px rgba(0,0,0.1,0.1);
+        }
+
+        .drop-down-list a{
+            color: black;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .drop-down-list a:hover {
+            background-color: rgb(221, 218, 218);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="drop-down">
+        <a class="a">Hello</a>
+        <button class="button">Lịch làm việc</button>
+        <div class="drop-down-list">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</body>
+</html>

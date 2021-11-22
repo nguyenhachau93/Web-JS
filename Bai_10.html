@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .div1, .div2, .div3 {
+                float: left;
+                width: 33%
+            }
+
+            .div4, .div5,.div6 {
+                display: inline-block;
+                width: 33%;
+            }
+
+            div {
+                border: 1px solid red;
+            }
+
+            .img1 {
+                border: 2px solid black;
+                overflow: auto;
+                width: 500px
+            }
+
+            .img2 {
+                float: right;
+                width: 33%
+            }
+
+            .position {
+                position: fixed;
+                top: 300px;
+                right: 0;
+            }
+
+            .relative {
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 2px solid green;
+            }
+
+            .absolute {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100px;
+                height: 50px;
+                border: 2px solid red;
+            }
+
+            .sticky {
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: lightblue;
+                border: 2px solid black;
+            }
+
+            .padding {
+                padding-bottom: 1000px;
+            }
+
+            .div7, .div8, .div9 {
+                width: 50px;
+                height: 50px;
+            }
+
+            .div7 {
+                background: blue;
+                position: relative;
+                z-index: 2;
+            }
+
+            .div8 {
+                background: red;
+                margin-top: -40px;
+                margin-left: 10px;
+                z-index: 1;
+                position: relative;
+            }
+
+            .div9 {
+                background: green;
+                margin-top: -40px;
+                margin-left: 20px;
+                z-index: 3;
+                position: relative;
+            }
+
+            .marginauto {
+                margin: auto;
+                width: 60%;
+                border: 3px solid blue;
+                text-align: center;
+            }
+
+            .marginimg {
+                width: 300px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .marginauto2 {
+                border: 2px solid white;
+            }
+
+            .right {
+                float: right;
+                background-color: blue;
+            }
+
+            .left {
+                float: left;
+                background-color: red;
+            }
+
+            .center {
+                padding: 70px 0;
+                border: 2px solid blue;
+            }
+
+            .lineheight {
+                line-height: 200px;
+                border: 2px solid blue;
+                text-align: center;
+            }
+
+            div p {
+                background-color: lightblue;
+            }
+
+            div > p {
+                background-color: blueviolet;
+            }
+
+            div + p {
+                background-color: green;
+            }
+
+            div ~ p {
+                background-color: pink;
+            }
+
+            .after:after {
+                content: " Ha Chau"
+            }
+
+            .before:before {
+                content: "Ha Chau "
+            }
+
+            .li:first-child {
+                background: green;
+            }
+
+            .li:last-child {
+                background: blue;
+            }
+
+            .li:3th-child {
+                background: purple;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+        <br><br><br>
+        <div class="div4">div4</div>
+        <div class="div5">div5</div>
+        <div class="div6">div6</div>
+        <br><br><br>
+        <div class="img1">
+            <img src="ha-long.jpg" class="img2">
+            Hôm nay ai đưa em về, đường khuya sao còn vắng hoe. Mùa thu cho em
+            Nếu mùa thu không còn thì sao mà em lại ở đây?
+        </div>
+
+        <div class="position">hello world</div>
+        <br><br><br>
+        <div class="relative">
+            <div class="absolute"></div>
+        </div>
+        <div><h1>Hello world</div>
+        <div class="sticky">
+            Olalal
+        </div>
+
+        <div class="padding">
+            You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:
+        </div>
+
+        <br><br><br>
+        <div class="div7"></div>
+        <div class="div8"></div>
+        <div class="div9"></div>
+        <br><br><br>
+        <div class="marginauto">
+            <p>Lorem ip sum</p>
+        </div>
+        <br><br><br>
+        <div class="marginauto2">
+            <img src="ha-long.jpg" class="marginimg">
+        </div>
+        <br><br><br>
+        <div class="right">
+            ok
+        </div>
+        <div class="left">
+            ok
+        </div>
+        <br><br>
+        <div class="center">
+            I am vertically centered
+        </div>
+
+        <br><br>
+        <div class="lineheight">
+            I am vertically centered
+        </div>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectet</p>
+            <p>Lorem ipsum dolor sit amet, consectet</p>
+            <section><p>Lorem ipsum dolor sit amet, consectet</p></section>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectet</p>
+        <p>Lorem ipsum dolor sit amet, consectet</p>
+
+        <br><br>
+        <div class="after">
+            Nguyen
+        </div>
+        <br><br>
+        <div class="before">
+            Nguyen
+        </div>
+
+        <br><br>
+        <ul>
+            <li>abc</li>
+            <li>abc</li>
+            <li>abc</li>
+            <li>abc</li>
+            <li>abc</li>
+        </ul>
+    </body>
+</html>

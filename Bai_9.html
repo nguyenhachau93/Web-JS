@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/c799921f76.js" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            font-family: 'Mochiy Pop P One', sans-serif;
+        }
+
+        .fa-atlas {
+            color: red;
+            font-size: 20px;
+        }
+
+        .fa-bath {
+            color: blue;
+            font-size: 40px;
+        }
+
+        .fa-biking {
+            color: orange;
+            font-size: 60px;
+        }
+
+        .noline:hover {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        button {
+            border: 2px solid green;
+            background-color: white;
+            width: 200px;
+            height: 70px;
+        }
+
+        button:hover {
+            border: 2px solid red;
+            background-color: red;
+            color: white;
+        }
+
+        .noline1:link {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+        }
+
+        .noline1:hover {
+            color: white;
+        }
+
+        .div1 {
+            border:1px solid red;
+            display: none; /*block*/
+        }
+
+        .div2 {
+            border:1px solid green;
+            display: inline-block; /*block*/
+            width: 550px;
+        }
+
+        .div3 {
+            border:1px solid purple;
+            display: inline-block; /*block*/
+            width: 500px;
+        }
+
+        .div4 {
+            border:1px solid blue;
+            display: inline;
+        }
+
+        .span1 {
+            border:1px solid red;
+            display:block;
+        }
+
+        .span2 {
+            border:1px solid green;
+        }
+
+        .span3 {
+            border:1px solid purple;
+        }
+
+        .span4 {
+            border:1px solid blue;
+        }
+
+        .overflow {
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow: scroll;
+        }
+
+        div {
+            float: left;
+            padding: 15px;
+        }
+
+        .div11 {
+            background: red;
+        }
+
+        .div22 {
+            background: green;
+        }
+
+        .div33 {
+            background: purple
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS font-family</h1>
+    <i class="fas fa-atlas"></i>
+    <i class="fas fa-bath"></i>
+    <i class="fas fa-biking"></i><br>
+    <br><br>
+    <a href="#" class="noline">Text Link</a><br><br>
+    <button type="button"><a href="#" class="noline1">Link Button</a></button>
+    <br><br>
+    
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <div class="div3">div3</div>
+    <div class="div4">div4</div>
+    <span class="span1">span1</span>
+    <span class="span2">span2</span>
+    <span class="span3">span3</span>
+    <span class="span4">span4</span>
+
+    <div class="overflow">The overflow property specifies what should happen if content overflows an element's box.
+
+        This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.</div>
+    <div class="bigdiv">
+        <div class="div11">div1</div>
+        <div class="div22">div2</div>
+        <div class="div33">div3</div>
+    </div>
+</body>
+</html>

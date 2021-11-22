@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            
+            .login_form {
+                border: 1px solid black;
+                width: 300px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            table, th, td {
+                border: 1px solid red;
+                border-collapse: collapse;
+                margin-left: 15px;
+                margin-bottom: 10px;
+                background-color: rgb(148, 228, 248);
+                
+            }
+
+            tr {
+                height:30px;
+                width: 1200px;
+            }
+            
+            h1 {
+                text-align: center;
+                color: rgb(170, 80, 7);
+            }
+
+            .button {
+                text-align: center;
+            }
+
+            .text_field {
+                width: 150px;
+                margin: 3px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form class="login_form">
+            <h1>Đăng Nhập</h1>
+            <div class="table">
+                <table>
+                    <tr>
+                        <td><label for="fname">Mã người dùng:</label></td>
+                        <td>
+                            <input type="text" id="fname" name="fname" class="text_field">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">Mật khẩu:</label></td>
+                        <td><input type="password" id="pwd" name="pwd" class="text_field"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="button">
+                            <input type="submit" value="Đồng ý">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

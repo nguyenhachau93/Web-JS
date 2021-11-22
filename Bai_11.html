@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li:first-child {
+                background-color: blue;
+            }
+
+            li:last-child {
+                background-color: red;
+            }
+
+            li:nth-child(3) {
+                background-color: green;
+            }
+
+            img {
+                width: 400px;
+            }
+            img:hover {
+                width: 400px;
+                opacity: 0.5;
+            }
+
+            .drop-down-content {
+                display: none;
+                background-color: grey;
+                width: 100px;
+                padding: 12 16px;
+            }
+
+            .dropdown:hover .drop-down-content {
+                display:block;
+            }
+
+            .border-radius {
+                background-color: red;
+                border-radius: 15px;
+                width: 150px;
+                height: 130px;
+                text-align: center;
+            }
+            .background-image {
+                background-image: url("ha-long.jpg");
+                background-repeat: none;
+                background-size: cover;
+            }
+
+            .gradient {
+                height: 200px;
+                background-image: linear-gradient(to top right, blue, white, red, yellow)
+            }
+
+            .text1 {
+                width: 200px;
+                white-space: nowrap;
+                border: 1px solid black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            @font-face {
+                font-family: chau;
+                src: url("VNI-Thuphap2.ttf");
+            }
+
+            .font {
+                font-family: chau;
+            }
+        </style>    
+    </head>
+    <body>
+        <img src="ha-long.jpg">
+        <ul>
+            <li>Hello, world!</li>
+            <li>Hello, world!</li>
+            <li>Hello, world!</li>
+            <li>Hello, world!</li>
+            <li>Hello, world!</li>
+        </ul>
+
+        <div class="dropdown">
+            <span>Mouse over me</span>
+            <div class="drop-down-content">
+                <p>Hello World!</p>
+            </div>
+        </div>
+
+        <div class="border-radius">
+            ok.
+        </div>
+
+
+        <div class="background-image">
+            <div>
+                oiaejfioeajfoieajfioeajfae 
+                <br><br>
+            </div>
+        </div>
+
+        <div class="gradient">
+
+        </div>
+
+        <div class="text1">
+            This is come long ass text that will not fit in the box
+        </div>
+
+        <div class="font">
+                Xin dừng tay
+        </div>
+    </body>
+</html>

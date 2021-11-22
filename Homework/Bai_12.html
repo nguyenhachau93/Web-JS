@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .body_bordered {
+                border: 1px solid black;
+                Width: 540px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            h2 {
+                text-align: center;
+                color: green;
+            }
+            
+            table, th, td {
+                border: 1px solid blue;
+                border-collapse: collapse;
+                margin-left: 15px;
+                margin-bottom: 10px;
+                background-color: rgb(196, 255, 201);
+                padding-left:2px;
+            }
+
+            tr {
+                height: 30px;
+            }
+
+            .input1 {
+                width: 250px;
+                padding-right:1em;
+                margin-right: 2em;
+                margin-left: 2px;
+            }
+
+            .input2 {
+                width: 210px;
+                margin-left: 2px;
+            }
+
+            .input3 {
+                margin-left: 2px;
+            }
+
+            .du_doan {
+                margin-right: 2em;
+            }
+
+            .input4 {
+                width: 80px;
+                margin-left: 2px;
+            }
+
+            .bloc {
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+                border: solid grey 1px;
+            }
+
+            .bloc select {
+                padding: 10px;
+                margin: -5px -20px -5px -5px;
+            }
+
+            .danh_muc {
+                color: rgb(9, 32, 9);
+            }
+
+            .confirm {
+                text-align: center;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body_bordered">
+            <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+            <form class="form_table">
+                <table>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Họ và tên:</label></td>
+                        <td><input type="text" id="fname" name="fname" class="input1"></td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Địa chỉ:</label></td>
+                        <td><input type="text" id="fname" name="fname" class="input2"></td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Điện thoại:</label></td>
+                        <td><input type="text" id="fname" name="fname" class="input3"></td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Phái:</label></td>
+                        <td>
+                            <input type="radio" id="nam" name="gioi_tinh" value="Nam">
+                            <label for="nam">Nam</label>
+                            <input type="radio" id="nu" name="gioi_tinh" value="Nu">
+                            <label for="nu">Nữ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Nghề nghiệp:</label></td>
+                        <td>
+                            <select id="nghe_nghiep" name="nghe_nghiep">
+                                <option value="bac_si">Bác sĩ</option>
+                                <option value="ky_su">Kỹ sư</option>
+                                <option value="giao_vien">Giáo viên</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname">Chọn sản phẩm tham gia:</label></td>
+                        <td>
+                            <div class="bloc">
+
+                                <select id="san_pham" name="san_pham" size="4" multiple>
+                                    <option value="rang">Kem đánh răng</option>
+                                    <option value="bot">Bột giặt</option>
+                                    <option value="goi">Dầu gội đầu</option>
+                                    <option value="tam">Sữa tắm</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="danh_muc"><label for="fname" class="du_doan">Số người dự đoán tham gia:</label></td>
+                        <td>
+                            <input type="text" id="fname" name="du_doan" class="input4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="confirm">
+                            <input type="submit" value="Đồng ý">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="confirm">Bạn đã đăng ký thành công!!!</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    padding-top: 300px;
+    padding-left: 15%;
+}
+
+img {
+    width: 300px;
+}
+
+.img2, .img3, .img4, .img1 {
+    border: 1.5px solid rgb(182, 176, 176);
+    float: left;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.img2:hover, .img3:hover, .img4:hover, .img1:hover {
+    border: 1.5px solid rgb(22, 21, 21);
+}
+.description {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 210px;
+    height: 70px;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: 23px;
+}
