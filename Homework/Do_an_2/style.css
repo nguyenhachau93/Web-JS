@@ -63,7 +63,7 @@ header ul li:first-child, header ul li:nth-child(2) {
 }
 
 .home-text {
-    height: 36%;
+    height: 36vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,17 +72,18 @@ header ul li:first-child, header ul li:nth-child(2) {
 }
 
 .home-text .home-text-content {
-    width: 25%;
+    width: 42rem;
 }
+
 .home-text .home-text-content div {
     font-family: 'Montserrat Medium', sans-serif;
-    font-size: 3em;
+    font-size: 2.8rem;
     margin-bottom: 1em;
 }
 
 .home-text .home-text-content p {
     color: #8d8b8b;
-    font-size: 1.42em;
+    font-size: 1.5rem;
     font-family: 'NunoSans';
 }
 
@@ -110,6 +111,7 @@ header ul li:first-child, header ul li:nth-child(2) {
 .footer .address {
     width: 25%;
 }
+
 .footer .address .address1 div {
     font-family: 'Montserrat Medium';
     margin-bottom: 7%;
@@ -167,26 +169,39 @@ header ul li:first-child, header ul li:nth-child(2) {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: contain cover;
     background-image: url("https://siva5654.github.io/DCKAP/images/banner.png");
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 0% 0%;
+}
+
+.about-banner .about-banner-text {
+    width: 35%;
+    height: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.about-banner .about-banner-text {
-    width: 35%;
+.about-banner-text1 {
+    width: 93%;
+    
 }
+
 .about-banner div {
     font-family: 'Montserrat Medium';
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin-bottom: 1em;
+    margin-top: 0.8em;
+    overflow: hidden;
 }
 
 .about-banner p {
-    font-size: 1em;
-    color: #b6b3b3;
+    font-size: 0.7em;
+    overflow: hidden;
 }
 
 .about-numbers {
@@ -252,6 +267,7 @@ header ul li:first-child, header ul li:nth-child(2) {
     font-size: 1.7em;
     font-family: 'NunoSans';
     margin-bottom: 1.5em;
+    overflow: hidden;
 }
 
 .about-me-text img {
@@ -330,6 +346,7 @@ header ul li:first-child, header ul li:nth-child(2) {
     color: #777777;
     font-size: 1.8em;
     margin-bottom: 1em;
+    overflow: hidden;
 }
 
 .single-info1 p:last-child {
@@ -341,6 +358,7 @@ header ul li:first-child, header ul li:nth-child(2) {
     color: #777777;
     font-size: 1.8em;
     margin-bottom: 0.5em;
+    overflow: hidden;
 }
 
 .single-info .single-details strong {
@@ -397,10 +415,254 @@ header ul li:first-child, header ul li:nth-child(2) {
 }
 
 .contact-main {
-    padding: 0 7%;
+    padding: 5% 7%;
+    background-color: #f5f5f5;
+}
+
+.contact-form{
+    width: 100%;
 }
 
 .contact-info {
     display: grid;
     grid-template-columns: 4fr 6fr;
+    box-sizing: border-box;
+}
+
+.contact-form .name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.contact-form .name input {
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.contact-form .title {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.title, input.name, input.comment {
+    padding: 2%;
+    border: 1px solid white;
+    font-family: 'NunoSans';
+}
+
+.area {
+    height: 250px;
+    width: 100%;
+    border: 1px solid white;
+    padding: 2%;
+    box-sizing: border-box;
+    font-family: 'NunoSans';
+    color:rgb(126, 119, 119);
+}
+
+.contact-info .name {
+    margin-bottom: 2%;
+}
+
+.contact-form .title, .contact-form textarea {
+    margin-bottom: 4%;
+}
+
+.contact-form button {
+    width: 15%;
+    height: 4em;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    background: #10c9c3;
+    color: white;
+    transition: 300ms;
+    font-family: 'Montserrat Medium';
+}
+
+.contact-form button:hover {
+    background: #1041c9;
+}
+
+.contact-info {
+    margin-bottom: 5%;
+}
+
+iframe {
+    width: 100%;
+    height: 800px;
+}
+.contact-contact {
+    width: 70%;
+}
+.contact-contact .contact-head {
+    font-family: 'NunoSans';
+    margin-bottom: 5%;
+    font-size: 3em;
+}
+
+.contact-contact p{
+    font-family: 'NunoSans';
+    font-size: 1.7em;
+    color: #787878;
+    margin-bottom: 4%;
+}
+
+.contact-contact p strong {
+    color: black;
+    font-family: 'NunoSans';
+    font-size: 1em;
+}
+
+.op-header {
+    background-image: url("Bai_15 img/61a0aea273564.jpg");
+    background-repeat: no-repeat;
+    
+}
+
+.op-banner {
+    background: transparent;
+    height: 10%;
+    display: flex;
+    padding: 0 7%;
+    justify-content: space-between;
+    align-items: center;
+    overflow:auto;
+}
+.op-banner ul {
+    display: flex;
+    list-style:none;
+}
+
+.op-banner ul li a{
+    color: black;
+    text-decoration: none;   
+    text-transform: uppercase;
+    font-family: 'Montserrat Medium';
+    margin-right: 4%;
+}
+
+@media only screen and (max-width: 992px) {
+    header ul li a {
+        font-size: 0.8rem;
+    }
+    .home-text {
+        height: 30vh;
+    }
+    
+    .home-text .home-text-content {
+        width: 31em;
+    }
+    
+    .home-text .home-text-content div {
+        font-size: 2rem;
+    }
+    
+    .home-text .home-text-content p {
+        font-size: 1.1rem;
+    }
+
+
+    .footer .address .address1 div {
+        font-size: 1em;
+    }
+    
+    .footer .address .address1 p {
+        font-size: 0.8em;
+    }
+    
+    .footer .contact .contact1 p {
+        font-size: 1em;
+    }
+    
+    
+    .footer .link ul li a {
+        line-height:2em;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header ul li a {
+        font-size: 0.8rem;
+    }
+    
+    .home-text {
+        height: 30vh;
+    }
+    
+    .home-text .home-text-content {
+        width: 31em;
+    }
+    
+    .home-text .home-text-content div {
+        font-size: 2rem;
+    }
+    
+    .home-text .home-text-content p {
+        font-size: 1.1rem;
+    }
+
+
+    .footer .address .address1 div {
+        font-size: 1em;
+    }
+    
+    .footer .address .address1 p {
+        font-size: 0.8em;
+    }
+    
+    .footer .contact .contact1 p {
+        font-size: 1em;
+    }
+    
+    
+    .footer .link ul li a {
+        line-height:2em;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header ul li a {
+        font-size: 0.8rem;
+    }
+    
+    .home-text {
+        height: 30vh;
+    }
+    
+    .home-text .home-text-content {
+        width: 31em;
+    }
+    
+    .home-text .home-text-content div {
+        font-size: 2rem;
+    }
+    
+    .home-text .home-text-content p {
+        font-size: 1.1rem;
+    }
+
+    
+
+    .footer .address .address1 div {
+        font-size: 1em;
+    }
+    
+    .footer .address .address1 p {
+        font-size: 0.8em;
+    }
+    
+    .footer .contact .contact1 p {
+        font-size: 1em;
+    }
+    
+    
+    .footer .link ul li a {
+        line-height:2em;
+        font-size: 1em;
+    }
 }
