@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .hienthi {
+            border: 5px solid black;
+            border-radius: 50% 50% 50% 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: rgb(255, 51, 0)
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container-child1 {
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            height: 100px;
+            margin: auto;
+            margin-top: 15%;
+            margin-bottom: 2%;
+        }
+
+        input {
+            width: 15rem;
+            height: 5rem;
+            background: rgb(255, 51, 0);
+
+            color: white;
+            font-size: 2rem;
+            transition: 400ms;
+        }
+
+        input:hover {
+            background: rgb(11, 32, 224);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-child1">
+            <div class="hienthi" id="so1">0</div>
+            <div class="hienthi" id="so2">0</div>
+            <div class="hienthi" id="so3">0</div>
+            <div class="hienthi" id="so4">0</div>
+            <div class="hienthi" id="so5">0</div>
+            <div class="hienthi" id="so6">0</div>
+            <div class="hienthi" id="so7">0</div>
+            <div class="hienthi" id="so8">0</div>
+        </div>
+        <input type="button" value="Chọn số" onclick="chonso()"></input>
+    </div>
+
+    <script>
+        function chonso() {
+            // lặp từ 1 tới 9
+            for (let i = 1; i < 9; i++) {
+                // lấy string so1, so2, so3...
+                text = "so" + i.toString();
+
+                // gán giá trị có các id từ so1, so2...
+                document.getElementById(text).innerHTML = Math.floor(Math.random() * 100);
+            }
+        }
+    </script>
+</body>
+
+</html>

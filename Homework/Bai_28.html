@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type='text/css'>
+        div {
+            display: flex;
+            width: 300px;
+        }
+
+        .tenthat p:first-child {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="hoTen" placeholder="Nhập họ và tên">
+    <button onclick="xuLy()">Xử lý dữ liệu</button>
+
+    <script>
+        function xuLy() {
+            var tenDayDu = document.getElementById("hoTen").value;
+            var tenGoi = " " + tenDayDu.slice(tenDayDu.lastIndexOf(" "), tenDayDu.length);
+            var tenHo = " " + tenDayDu.slice(0, tenDayDu.indexOf(" "));
+            var tenDem = " " + tenDayDu.slice(tenDayDu.indexOf(" "), tenDayDu.lastIndexOf(" "));
+
+            document.getElementById("display1").innerHTML = tenGoi;
+            document.getElementById("display2").innerHTML = tenHo;
+            document.getElementById("display3").innerHTML = tenDem;
+        }
+    </script>
+
+
+    <div class="tenthat">
+        <p>Tên: </p>
+        <p id="display1"></p>
+    </div>
+    <div class="tenthat">
+        <p>Họ: </p>
+        <p id="display2"></p>
+    </div>
+    <div class="tenthat">
+        <p>Tên đệm: </p>
+        <p id="display3"></p>
+    </div>
+</body>
+
+</html>

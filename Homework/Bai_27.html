@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-12</title>
+</head>
+
+<body>
+    <div class="name">
+        <input type="text" placeholder="Your Name" class="name" id="hoten">
+        <input type="text" placeholder="Your Email" class="name" id="email">
+    </div>
+    <input type="text" placeholder="Your Title" class="title" id="title">
+    <textarea class="area" id="comment">Your Comment</textarea>
+
+    <button onclick="showInfo(thongTin)"> send message </button>
+
+    <p id="kq"></p>
+</body>
+<script>
+    let thongTin = {
+        hoTen: "",
+        email: "",
+        danhXung: "",
+        comment: ""
+    }
+
+    function getData(paramInfoObj) {
+        // truy cập đến các input
+        let ipHoTen = document.getElementById("hoten");
+        let ipEmail = document.getElementById("email");
+        let ipDanhXung = document.getElementById("title");
+        let ipComment = document.getElementById("comment")
+        // lấy giá trị 
+        paramInfoObj.hoTen = ipHoTen.value.trim();
+        paramInfoObj.email = ipEmail.value.trim();
+        paramInfoObj.danhXung = ipDanhXung.value.trim();
+        paramInfoObj.comment = ipComment.value.trim();
+    }
+
+    function showInfo(paramInfoObj) {
+        getData(thongTin);
+        let kq = document.getElementById("kq");
+        kq.innerHTML = "<h4> Thông tin của bạn đã được ghi nhận </h4>";
+        kq.innerHTML += "Họ và tên: " + paramInfoObj.hoTen + "<br>";
+        kq.innerHTML += "Địa chỉ email: " + paramInfoObj.email + "<br>";
+        kq.innerHTML += "Danh Xưng: " + paramInfoObj.danhXung + "<br>";
+        kq.innerHTML += "Comment của bạn: " + paramInfoObj.comment + "<br>";
+
+        // a = a + b;
+        // a += b; 
+    }
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: inline;
+            line-height: 5rem;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background-color: aquamarine;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #thanhToan {
+            background-color: red;
+            color: white;
+        }
+
+        #xoa {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><button onclick="themVao(this)">Sản phẩm 1</button></div>
+        <div><button onclick="themVao(this)">Sản phẩm 2</button></div>
+        <div><button onclick="themVao(this)">Sản phẩm 3</button></div>
+        <div><button onclick="tinhTien()" id="thanhToan">Tính tiền </button></div>
+        <div><button onclick="xoaGioHang()" id="xoa">Xóa Giỏ Hàng </button></div>
+        <div id="daChon"></div>
+    </div>
+
+    <script>
+        // Khởi tạo giỏ hàng
+        var gioHang = []
+
+        // Thêm sản phẩm vào cuối của giỏ hàng
+        function themVao(tenSanPham) {
+            gioHang.push(tenSanPham.innerHTML);
+        }
+
+        // In ra những phẩn tử trong giỏ hàng, cách nhau bởi - -
+        function tinhTien() {
+            if (gioHang.length == 0) {
+                document.getElementById("daChon").innerHTML = "Bạn không có sản phẩm nào trong giỏ hàng";
+            } else {
+                document.getElementById("daChon").innerHTML = "Bạn đã đặt các sản phẩm là: " + gioHang.join(" - ");
+            }
+        }
+
+
+        // Khởi tạo lại giỏ hàng
+        function xoaGioHang() {
+            gioHang = [];
+            document.getElementById("daChon").innerHTML = "Bạn không có sản phẩm nào trong giỏ hàng";
+        }
+    </script>
+</body>
+
+</html>

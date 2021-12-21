@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type='text/css'>
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        body img {
+            width: 540px;
+        }
+
+        .img-container img {
+            width: 100px;
+            border: 2px solid white;
+        }
+
+        .container {
+            width: 540px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../1pic.jpg" id="banner">
+    <div class="img-container">
+        <div class="container">
+            <img onmouseover="borderchange(this)" onmouseout="normalImg(this)" src="../2pic.jpg">
+            <img onmouseover="borderchange(this)" onmouseout="normalImg(this)" src="../3pic.jpg">
+            <img onmouseover="borderchange(this)" onmouseout="normalImg(this)" src="../4pic.jpg">
+            <img onmouseover="borderchange(this)" onmouseout="normalImg(this)" src="../5pic.jpg">
+            <img onmouseover="borderchange(this)" onmouseout="normalImg(this)" src="../6pic.jpg">
+        </div>
+    </div>
+
+        <script>
+            function borderchange(image) {
+                image.style.border = "2px solid red";
+                document.getElementById('banner').src = image.src;
+            }
+
+            function normalImg(image) {
+                image.style.border = "2px solid white";
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <div>
+        <div>
+            <div id="rates">
+                <input type="radio" name="pT" value="vID"> vID
+                <input type="radio" name="pT" value="make" checked="checked"> make
+            </div>
+            <br>
+            <div>
+                <input type="text" value="" id="thongTin">
+            </div>
+            <br>
+            <div>
+                <button value="Tìm kiếm" onclick="timKiem()">Tìm kiếm</button>
+            </div>
+            <br>
+            <div class="themVao">
+
+                Make: <input type="text" value="" id="hangXe">
+                Model:<input type="text" value="" id="dongXe">
+                Year:<input type="text" value="" id="doiXe">
+                Color:<input type="text" value="" id="mauXe">
+                vID:<input type="text" value="" id="kiHieu">
+            </div>
+            <br>
+            <div>
+                <button value="Thêm xe" onclick="themVao()">Thêm vào danh sách</button>
+            </div>
+            <br>
+            <div>
+                <button value="Thêm xe" onclick="xoaThu4()">Xóa xe thứ 4</button>
+            </div>
+            <br>
+            <div>
+                <button value="Thêm xe" onclick="themVaoDau()">Thêm honda vào đầu</button>
+            </div>
+        </div>
+    </div>
+    <p id="result"></p>
+    <script>
+        // Nếu vID = AB-10111 thì in ra được hãng xe và đời xe. 
+        // Nếu make = Mazda thì in ra được vID và model.
+        // Thêm vào cuối mảng 1 chiếc xe mới, có đầy đủ thông tin, dùng phương thức của mảng
+        // Xóa đi chiếc xe thứ 4 nằm trong mảng đang có, và thêm vào tại đó 1 chiếc xe mới.
+        // Thêm vào đầu của mảng 1 chiếc xe mới có tên là Honda và các thuộc tính còn lại. 
+        const carDb =
+            [
+                {
+                    make: "Ford",
+                    model: "Explorer",
+                    year: 2017,
+                    color: "white",
+                    vID: "AB-10111"
+                },
+                {
+                    make: "Toyota",
+                    model: "Corolla",
+                    year: 2018,
+                    color: "silver",
+                    vID: "DN-23218"
+                },
+                {
+                    make: "Mazda",
+                    model: "Mazda 6",
+                    year: 2020,
+                    color: "red",
+                    vID: "TZ-23212"
+                },
+                {
+                    make: "Toyota",
+                    model: "Fortuna",
+                    year: 2016,
+                    color: "black",
+                    vID: "IN-91925"
+                },
+                {
+                    make: "Mazda",
+                    model: "Mazda 3",
+                    year: 2019,
+                    color: "silver",
+                    vID: "MN-44593"
+                }
+            ];
+
+
+        function timKiem() {
+            var thongTin = document.getElementById("thongTin").value
+            var phuongThuc = document.querySelector('input[name="pT"]:checked').value;
+            if (phuongThuc == "vID") {
+                for (i = 0; i < carDb.length; i++) {
+                    if (carDb[i][phuongThuc] == thongTin) {
+                        document.getElementById("result").innerHTML = "Hãng xe: " + carDb[i]["make"] + "<br> " + "Đời xe: " + carDb[i]["year"];
+                    }
+                }
+            };
+
+            if (phuongThuc == "make") {
+                document.getElementById("result").innerHTML = thongTin
+                for (i = 0; i < carDb.length; i++) {
+                    if (carDb[i][phuongThuc] == thongTin) {
+                        document.getElementById("result").innerHTML = "vID: " + carDb[i]["vID"] + "<br> " + "model: " + carDb[i]["model"];
+                    }
+                }
+            }
+        }
+
+        function themVao() {
+            var newCar = {
+                make: document.getElementById("hangXe").value,
+                model: document.getElementById("dongXe").value,
+                year: document.getElementById("doiXe").value,
+                color: document.getElementById("mauXe").value,
+                vID: document.getElementById("kiHieu").value,
+            };
+
+            carDb.push(newCar);
+            document.getElementById("result").innerHTML = carDb[4]["vID"];
+        }
+
+        function xoaThu4() {
+            var newCar = {
+                make: document.getElementById("hangXe").value,
+                model: document.getElementById("dongXe").value,
+                year: document.getElementById("doiXe").value,
+                color: document.getElementById("mauXe").value,
+                vID: document.getElementById("kiHieu").value,
+            };
+
+            carDb[4] = newCar;
+            document.getElementById("result").innerHTML = carDb[4]["vID"];
+        }
+
+        function themVaoDau() {
+            var newCar = {
+                make: "Honda",
+                model: document.getElementById("dongXe").value,
+                year: document.getElementById("doiXe").value,
+                color: document.getElementById("mauXe").value,
+                vID: document.getElementById("kiHieu").value,
+            };
+
+            carDb.unshift(newCar);
+            document.getElementById("result").innerHTML = carDb[0]["vID"];
+        }
+    </script>
+</body>
+
+</html>

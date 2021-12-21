@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c799921f76.js" crossorigin="anonymous"></script>
 </head>
-    
-<body>  
+
+<body>
     <header>
         <img src="02_Home.jpg">
         <ul class="right">
@@ -20,62 +21,72 @@
     <div class="contact-main">
         <div class="contact-container">
             <div class="contact-info">
-                <div class="contact-contact"> 
-                    <div class="contact-head">Contact info:</div>
-                    <p>To give give beginning divide, cattle. Give moving
-                        won't, there the abundantly she'd she'd brought air 
-                        upon. Light hath subdue. Life days creature upon first
-                        heaven gathering dry.
-                    </p>
-                    <p><strong>Address: </strong>1011 Santa Monica Boulevard, LA</p>
-                    <p><strong>Phone: </strong>+44 987 065 908</p>
-                    <p><strong>Email: </strong>info@Example.com</p>
-                    <p><strong>Fax: </strong>+44 987 065 909</p>
-                </div>
-                <form class="contact-form">
-                    <div class="name">
-                        <input type="text"  placeholder="Your Name" class="name">
-                        <input type="text"  placeholder="Your Email" class="name">
+                <div class="col-8 col-s-8">
+                    <div class="contact-text">
+                        <div class="contact-head">Contact info:</div>
+                        <p>To give give beginning divide, cattle. Give moving
+                            won't, there the abundantly she'd she'd brought air
+                            upon. Light hath subdue. Life days creature upon first
+                            heaven gathering dry.
+                        </p>
+                        <p><strong>Address: </strong>1011 Santa Monica Boulevard, LA</p>
+                        <p><strong>Phone: </strong>+44 987 065 908</p>
+                        <p><strong>Email: </strong>info@Example.com</p>
+                        <p><strong>Fax: </strong>+44 987 065 909</p>
                     </div>
-                    <input type="text"  placeholder="Your Title" class="title">
-                    <textarea class="area">Your Comment</textarea>
-                    <button>send message</button>
+                </div>
+                <form class="col-4 col-s-4">
+                    <div class="name">
+                        <input type="text" placeholder="Your Name" class="name" id="hoten">
+                        <input type="text" placeholder="Your Email" class="name" id="email">
+                    </div>
+                    <input type="text" placeholder="Your Title" class="title" id="title">
+                    <textarea class="area" id="comment">Your Comment</textarea>
+                    <button onclick="showInfo(thongTin)"> send message </button>
                 </form>
             </div>
+        </div>
 
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8804.798232037549!2d-74.00334644328906!3d40.71039644905941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a26538b3995%3A0x4d3052ac3710527b!2sFleet%20Bakery!5e0!3m2!1sen!2sau!4v1637918707528!5m2!1sen!2sau" width="600" height="5550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8804.798232037549!2d-74.00334644328906!3d40.71039644905941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a26538b3995%3A0x4d3052ac3710527b!2sFleet%20Bakery!5e0!3m2!1sen!2sau!4v1637918707528!5m2!1sen!2sau"
+                width="600" height="5550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
+    </div>
+
 
     <div class="footer">
-        <div class="address">
+        <div class="col-8 col-s-8">
             <div class="address1">
                 <div>Piroll Design, Inc.</div>
                 <p>&copy; 2017 Piroll. All rights reserved.</p>
                 <p>Designed by robirurk.</p>
             </div>
         </div>
-        <div class="contact">
+        <div class="col-9 col-s-9">
             <div class="contact1">
                 <p>hello@pirolltheme.com</p>
                 <p>+44 987 065 908</p>
             </div>
         </div>
-        <div class="link">
-            <ul>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Carreer</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Legals</a></li>
-            </ul>
+        <div class="col-10 col-s-10">
+            <div class="part1">
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Carreer</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Legals</a></li>
+                </ul>
+            </div>
+
             <ul>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
@@ -85,4 +96,5 @@
         </div>
     </div>
 </body>
+
 </html>

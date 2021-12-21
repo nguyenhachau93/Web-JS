@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+<body>
+    <h1> Đâu là chim đại bàng</h1>
+    <button type="button" onclick="myFunction1()">    <img src="Chim sida.jfif"> </button>
+    <button type="button" onclick="myFunction2()">    <img src="download.jfif"> </button>
+    <button type="button" onclick="myFunction3()"><img src="download (1).jfif"> </button>
+
+    <p id="answer">Đây là đúng/sai?</p>
+    <script>
+        function cong() {
+            var so1 = Number(document.getElementById("number1").value);
+            var so2 = Number(document.getElementById("number2").value);
+            document.getElementById("demo").innerHTML = so1 + so2;
+        }
+
+        function myFunction() {
+            alert("Hello! I am an alert box!");
+        }
+
+        function myFunction1() {
+            document.getElementById("answer").innerHTML = "Sai";
+        }
+        
+        function myFunction2() {
+            document.getElementById("answer").innerHTML = "Sai";
+        }
+
+        function myFunction3() {
+            document.getElementById("answer").innerHTML = "Đúng";
+        }
+    </script>
+</body>
+</html>

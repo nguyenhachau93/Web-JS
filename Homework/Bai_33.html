@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="text" value="" id="thongTin">
+            <button onclick="timKiem()">Tìm kiếm in/of</button>
+            <button onclick="timKiem2()">Tìm kiếm while</button>
+            <button onclick="loaiBo()">Bỏ xe màu này</button>
+        </div>
+    </div>
+    <p id="result">None</p>
+    <script>
+        const carDb =
+            [
+                {
+                    make: "Ford",
+                    model: "Explorer",
+                    year: 2017,
+                    color: "white",
+                    vID: "AB-10111"
+                },
+                {
+                    make: "Toyota",
+                    model: "Corolla",
+                    year: 2018,
+                    color: "silver",
+                    vID: "DN-23218"
+                },
+                {
+                    make: "Mazda",
+                    model: "Mazda 6",
+                    year: 2020,
+                    color: "red",
+                    vID: "TZ-23212"
+                },
+                {
+                    make: "Toyota",
+                    model: "Fortuna",
+                    year: 2016,
+                    color: "black",
+                    vID: "IN-91925"
+                },
+                {
+                    make: "Mazda",
+                    model: "Mazda 3",
+                    year: 2019,
+                    color: "silver",
+                    vID: "MN-44593"
+                },
+                {
+                    make: "Mazda",
+                    model: "Mazda 3",
+                    year: 2019,
+                    color: "silver",
+                    vID: "MN-44593"
+                }
+            ];
+        // Nếu tìm được xe có vID = "AB-10111" thì in ra console thông tin của chiếc xe đó.
+        // Nếu tìm được xe có vID = "AB-10111" thì in ra console thông tin của chiếc xe đó. Dùng for in/for of.
+        // Nếu tìm được xe có vID = "AB-10111" thì in ra console thông tin của chiếc xe đó. Dùng while.
+        // Lặp qua tất cả các xe, nếu có xe nào có màu là black thì bỏ qua, chỉ in ra console các màu khác black.
+
+
+        // function to get value of id tag
+        function getValue(id) {
+            var userInput = document.getElementById(id).value;
+
+            // return the value
+            return userInput
+        }
+
+        // look for element within car properties and compare
+        function timKiem() {
+
+            // get user input
+            var thongTin = getValue("thongTin");
+
+            // array to append list of optimal car
+            var carList = [];
+
+            // loop through each car
+            for (car of carDb) {
+
+                // loop through elements in car
+                for (key in car) {
+
+                    // if the element has the same info as user's input
+                    if (car[key] == thongTin) {
+
+                        // add to array
+                        carList.push(car);
+                    }
+                }
+            }
+            // output to console the whole array
+            console.log(carList);
+        }
+
+        function timKiem2() {
+
+            // get value
+            var thongTin = getValue("thongTin");
+
+            // array init
+            var carList = [];
+            // loop index init
+            var i = 0;
+
+            // while loop
+            while (i < carDb.length) {
+                // for loop throgh elements
+                for (character in carDb[i]) {
+                    // check if element value is user input
+                    if (carDb[i][character] == thongTin) {
+                        // add to array
+                        carList.push(carDb[i]);
+                    }
+                }
+                i++;
+            }
+
+            // output to console
+            console.log(carList)
+        }
+
+        function loaiBo() {
+            // get value
+            var thongTin = getValue("thongTin");
+            // array init
+            var carList = [];
+
+            // loop through each car
+            for (car of carDb) {
+                // compare value 
+                if (car["color"] != thongTin) {
+                    // append to aray
+                    carList.push(car);
+                }
+
+            }
+
+            // out put to console
+            console.log(carList);
+        }
+
+
+    </script>
+</body>
+
+</html>

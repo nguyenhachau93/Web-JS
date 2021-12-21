@@ -1,22 +1,79 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            .ok {
-                text-align: right;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <th colspan="2" class = "ok">Company</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
+<html lang="en">
 
-            </tr>
-        </table>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-12</title>
+    <!-- 
+        1. Làm ứng dụng tự động đổi chữ thường thành chữ hoa mỗi khi người dùng nhập vào ô input.
+        2. Làm ứng dụng ghi thông tin khách hàng 
+
+        BTVN: 
+        1. Làm lại bài 2 với trang piroll
+        2. Làm ứng dụng theo file.
+     -->
+</head>
+
+<body>
+    <section-bai1>
+        <label for="ho-ten">Họ và tên: </label>
+        <input id="ho-ten" onkeydown="toUpper()" type="text">
+
+        <br> <br>
+        <label for="so-dien-thoai">Số điện thoại: </label>
+        <input id="so-dien-thoai" type="text">
+
+        <br> <br>
+        <label for="ngay-sinh">Ngày sinh: </label>
+        <input id="ngay-sinh" type="date">
+        <br> <br>
+        <button onclick="showInfo(thongTin)">Gửi</button>
+
+        <p id="kq"></p>
+    </section-bai1>
+
+
+</body>
+<script>
+    let thongTin = {
+        hoTen: "",
+        soDienThoai: "",
+        ngaySinh: "",
+        gioiTinh: ""
+    }
+
+    function toUpper() {
+        let text = document.getElementById("ho-ten");
+
+        text.value = text.value.toUpperCase();
+    }
+
+
+
+    function getData(paramInfoObj) {
+        // truy cập đến các input
+        let ipHoTen = document.getElementById("ho-ten");
+        let ipSoDienThoai = document.getElementById("so-dien-thoai");
+        let ipNgaySinh = document.getElementById("ngay-sinh");
+        // lấy giá trị 
+        paramInfoObj.hoTen = ipHoTen.value.trim();
+        paramInfoObj.soDienThoai = ipSoDienThoai.value.trim();
+        paramInfoObj.ngaySinh = ipNgaySinh.value;
+    }
+
+    function showInfo(paramInfoObj) {
+        getData(thongTin);
+        let kq = document.getElementById("kq");
+        kq.innerHTML = "<h4> Thông tin của bạn đã được ghi nhận </h4>";
+        kq.innerHTML += "Họ và tên: " + paramInfoObj.hoTen + "<br>";
+        kq.innerHTML += "Số điện thoại: " + paramInfoObj.soDienThoai + "<br>";
+        kq.innerHTML += "Ngày sinh: " + paramInfoObj.ngaySinh + "<br>";
+
+        // a = a + b;
+        // a += b; 
+    }
+</script>
+
 </html>
