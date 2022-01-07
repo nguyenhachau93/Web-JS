@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Pacifico&family=Source+Sans+Pro:wght@200;600&family=Yrsa:wght@300&display=swap');
+
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 1170px;
+}
+
+.col-1 {
+    width: 8.3%;
+}
+
+.col-2 {
+    width: 16.67%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-8 {
+    width: 66.67%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-11 {
+    width: 91.66666667%;
+}
+
+.top-header {
+    display: flex; 
+    justify-content: center;
+    background-color: #343333;
+    width: 100%;
+}
+
+.top-header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.top-header .col-5, .top-header .col-2 {
+    display: flex;
+}
+
+.top-header .col-2 {
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.top-header .col-2 i:nth-child(2) {
+    color: red;
+}
+
+#location, #email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+}
+
+#location {
+    margin-right: 54px;
+}
+
+#location i, #email i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header .container {
+    display: flex;
+    
+}
+
+.header .col-2 {
+    margin: 40px 0px;
+}
+
+.header .col-2 img {
+    height: 32px;
+}
+
+.header .col-2 p {
+    margin-top: -35px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.6rem;
+}
+
+.header .col-2 span {
+    color: red;
+}
+
+.header .container .nav-bar {
+    display: flex;
+    width: 90%;
+}
+
+.header .nav-bar {
+    display: flex;
+    width: 66.66666667%;
+    padding: 40px 0px;
+}
+
+.header .nav-bar ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .nav-bar ul li {
+    list-style-type: none;
+    margin: 0px 1.5rem;
+    font-family: 'Source Sans Pro';
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.header .search {
+    background: red;
+    color: white;
+}
+
+.header .cart {
+    margin-right: 30px;
+}
+
+.header .cart, .header .search  {
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
